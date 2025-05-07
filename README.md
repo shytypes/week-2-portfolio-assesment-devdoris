@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/UEuqaBmt)
 # 🎓 Week 2 Follow-Up Portfolio Assignment Template
 
 Welcome back, student! 👋
@@ -98,3 +99,9 @@ Because the repository automatically adds important info **after your first push
 Pulling updates prevents **errors** and keeps everything **up-to-date**! 🚀
 
 **Watch this video explaining everything 👉:** TODO
+
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-green?logo=github)](https://shytypes.github.io/week-2-portfolio-assesment-devdoris/)
+
+
+🚀 **View the project here**: [https://shytypes.github.io/week-2-portfolio-assesment-devdoris/](https://shytypes.github.io/week-2-portfolio-assesment-devdoris/)

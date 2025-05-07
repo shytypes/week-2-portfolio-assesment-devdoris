@@ -1,0 +1,214 @@
+/* Theme Styles */
+
+/* Default Light Theme */
+:root {
+    /* Light theme values are in variables.css */
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    /* Dark theme values are in variables.css */
+    
+    /* Buttons */
+    .btn-secondary {
+      border-color: var(--color-gray-700);
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--color-gray-800);
+    }
+    
+    /* Navigation */
+    .main-nav a:hover,
+    .main-nav a.active {
+      background-color: rgba(10, 132, 255, 0.15);
+    }
+    
+    /* Header */
+    .header.scrolled {
+      background-color: rgba(29, 29, 31, 0.8);
+      backdrop-filter: blur(10px);
+    }
+    
+    /* Skills */
+    .skill-bar {
+      background-color: var(--color-gray-700);
+    }
+    
+    /* Timeline */
+    .timeline-dot {
+      border-color: var(--color-gray-800);
+    }
+    
+    /* Work */
+    .work-item {
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .work-overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+    
+    .work-info h3 {
+      color: #f5f5f7;
+    }
+    
+    /* Testimonials */
+    .testimonial-dot {
+      background-color: var(--color-gray-700);
+    }
+    
+    /* Form */
+    .form-group input,
+    .form-group textarea {
+      background-color: var(--color-gray-800);
+      border-color: var(--color-gray-700);
+      color: var(--color-text);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.3);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--color-gray-900);
+    }
+    
+    /* Theme Button */
+    #theme-button {
+      background-color: var(--color-gray-800);
+    }
+  }
+  
+  /* Custom Dark Mode Toggle Animation */
+  #theme-button {
+    overflow: hidden;
+  }
+  
+  .icon-light,
+  .icon-dark {
+    will-change: transform, opacity;
+  }
+  
+  [data-theme="dark"] .icon-dark {
+    animation: rotateIn 0.5s forwards;
+  }
+  
+  [data-theme="light"] .icon-light {
+    animation: rotateIn 0.5s forwards;
+  }
+  
+  @keyframes rotateIn {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(0) scale(1);
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    :root {
+      --color-primary: #0000FF;
+      --color-text: #000000;
+      --color-background: #FFFFFF;
+      --color-border: #000000;
+    }
+    
+    [data-theme="dark"] {
+      --color-primary: #00BFFF;
+      --color-text: #FFFFFF;
+      --color-background: #000000;
+      --color-border: #FFFFFF;
+    }
+    
+    /* Increase contrast for text */
+    .text-light,
+    .lead,
+    .stat-label,
+    .period,
+    .work-info p,
+    .contact-card-content p {
+      color: var(--color-text) !important;
+      opacity: 0.9;
+    }
+    
+    /* Add borders to elements for better distinction */
+    .card,
+    .timeline-content,
+    .skills-bars,
+    .work-item,
+    .testimonial-content,
+    .contact-form-container {
+      border: 2px solid var(--color-border);
+    }
+    
+    /* Ensure buttons have sufficient contrast */
+    .btn-primary {
+      color: white !important;
+      background-color: var(--color-primary) !important;
+    }
+    
+    .btn-secondary {
+      color: var(--color-text) !important;
+      background-color: transparent !important;
+      border: 2px solid var(--color-border) !important;
+    }
+  }
+  
+  /* Reduced Motion Preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    
+    .parallax-element {
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    .reveal-text {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    
+    .fade-in {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    .cursor,
+    .cursor-follower {
+      display: none !important;
+    }
+    
+    .shape {
+      animation: none !important;
+    }
+    
+    .scroll-indicator {
+      display: none !important;
+    }
+    
+    .work-item:hover .work-image img {
+      transform: none !important;
+    }
+    
+    .skill-progress {
+      transition: none !important;
+    }
+    
+    .timeline-dot::after {
+      animation: none !important;
+    }
+  }

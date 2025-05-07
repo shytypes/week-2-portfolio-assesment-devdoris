@@ -1,27 +1,350 @@
 <!doctype html>
 <html lang="en">
-  <!-- DO NOT CHANGE CODE WITHIN THE HEAD ELEMENT -->
-  <!-- UNLESS YOU KNOW WHAT YOU"RE DOING-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <!-- add fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- local style -->
-    <link rel="stylesheet" href="styles/global.css" />
+    <title>DevDoris Portfolio | Home</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <!-- Header Area -->
-    <header></header>
-    <!-- Main Area -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <div class="theme-toggle">
+      <button id="theme-button" aria-label="Toggle dark mode">
+        <span class="icon-light">☀️</span>
+        <span class="icon-dark">🌙</span>
+      </button>
+    </div>
+    
+    <div class="page-transition"></div>
+    
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
     <main>
-      <h1>My Amazing Portfolio</h1>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="reveal-text">
+              <span class="line">Hello, I'm <span class="highlight">DevDoris</span>.</span>
+              <span class="line">I create digital</span>
+              <span class="line">experiences.</span>
+            </h1>
+            <p class="lead reveal-text delay-1">Frontend Developer</p>
+            <div class="hero-cta reveal-text delay-2">
+              <a href="#work" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-image parallax-element">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">About Me</span>
+            <h2 class="section-title">Who I am</h2>
+          </div>
+          
+          <div class="about-content">
+            <div class="about-image parallax-element" data-speed="0.1">
+              <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/163/847/original/1745333556720.jpeg?1745339694" alt="an image of DevDoris" />
+              <div class="about-image-decoration"></div>
+            </div>
+            
+            <div class="about-text">
+              <p>I'm a frontend developer with a passion for creating clean, efficient, and user-friendly websites. I focus on writing well-structured code and implementing responsive designs that work seamlessly across all devices.</p>
+              
+              <p>Based in Lagos - Nigeria, I specialize in building modern web applications using the latest technologies and best practices in web development.</p>
+              
+              <div class="about-stats">
+                <div class="stat">
+                  <span class="stat-number">10+</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Satisfaction</span>
+                </div>
+              </div>
+              
+              <a href="about.html" class="btn btn-text">Learn more about me <span class="arrow-right">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="skills" class="skills section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">My Expertise</span>
+            <h2 class="section-title">Skills</h2>
+          </div>
+          
+          <div class="skills-content">
+            <div class="skills-text">
+              <p>I specialize in frontend development with a focus on creating responsive and accessible web applications. My technical and soft skills include:</p>
+            </div>
+            
+            <div class="skills-bars">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>HTML/CSS</h4>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Communication & Collaboration</h4>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Problem-Solving & Attention to Detail</h4>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Time Management & Prioritization</h4>
+                  <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="work" class="work section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Portfolio</span>
+            <h2 class="section-title">Selected Work</h2>
+          </div>
+          
+          <div class="work-grid">
+            <div class="work-item" data-category="frontend">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Project 1" />
+              </div>
+              <div class="work-overlay">
+                <div class="work-info">
+                  <h3>Portfolio Website</h3>
+                  <p>HTML, CSS, JavaScript</p>
+                  <a href="https://devdoris.github.io/devdoris-portfolio/" target="_blank" class="work-link">View Project</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="work-item" data-category="javascript">
+              <div class="work-image">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Project 2" />
+              </div>
+              <div class="work-overlay">
+                <div class="work-info">
+                  <h3>Weather App</h3>
+                  <p>JavaScript, API Integration</p>
+                  <a href="https://devdorisweatherapp.netlify.app" target="_blank" class="work-link">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact" class="contact section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Contact Me</h2>
+          </div>
+          
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <span>📱</span>
+                </div>
+                <div class="contact-card-content">
+                  <h3>Phone</h3>
+                  <p>+234 7025813622</p>
+                </div>
+              </div>
+              
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <span>✉️</span>
+                </div>
+                <div class="contact-card-content">
+                  <h3>Email</h3>
+                  <p>devdoris1@gmail.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <span>📍</span>
+                </div>
+                <div class="contact-card-content">
+                  <h3>Location</h3>
+                  <p>Lekki, Lagos - Nigeria</p>
+                </div>
+              </div>
+              
+              <div class="social-links">
+                <a href="https://x.com/DevDoris1" target="_blank"  class="social-link" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/devdoris/" target="_blank"  class="social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href=" https://github.com/devdoris" target="_blank"  class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            
+            <div class="contact-form-container">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" required>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" required>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                  <div class="form-error"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+              
+              <div class="form-success">
+                <div class="success-icon">✓</div>
+                <h3>Message Sent!</h3>
+                <p>Thank you for your message. I'll get back to you soon.</p>
+                <button class="btn btn-secondary reset-form">Send Another Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html">DevDoris</a>
+            <p>Frontend Developer since 2025</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 DevDoris. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
